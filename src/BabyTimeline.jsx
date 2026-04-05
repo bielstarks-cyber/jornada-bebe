@@ -76,13 +76,11 @@ export default function BabyTimeline() {
                 </p>
 
                 {/* Container da Foto Real */}
-                <div className="w-full h-64 md:h-80 bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
+                <div className="w-full bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
                   <img 
                     src={evento.imagem} 
                     alt={`Foto marcando ${evento.idade}`}
-                    //className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
-                    // O object-cover garante que a foto preencha o espaço sem amassar a imagem
+                    className="w-full object-contain hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 
