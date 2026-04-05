@@ -110,32 +110,23 @@ export default function BabyTimeline() {
 
   return (
     <div className="min-h-screen bg-blue-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8"> {/* Main container with flex layout */}
+      <div className="max-w-3xl mx-auto"> {/* Main container now centered and single column */}
         
-        {/* Coluna da Esquerda (Cabeçalho e Galeria Geral) */}
-        <div className="md:w-1/2">
-          {/* Cabeçalho */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-extrabold text-gray-800 sm:text-5xl">
-              Nossa Maior Aventura
-            </h1>
-            <p className="mt-4 text-xl text-gray-600">
-              A linha do tempo do nosso amorzinho.
-            </p>
-          </div>
-
+        {/* Cabeçalho */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+            Nossa Maior Aventura
+          </h1>
+          <p className="mt-4 text-xl text-gray-600">
+            A linha do tempo do nosso amorzinho.
+          </p>
         </div>
 
-        {/* Coluna da Direita (Linha do Tempo Visual e Quadros Mensais) */}
-        <div className="md:w-1/2 relative flex flex-col items-start">
-          {/* Linha do Tempo Vertical Azul Principal */}
-          <div className="absolute left-[12px] top-0 w-1 h-full bg-blue-200 hidden md:block z-0"></div> {/* Ajuste 'left' para alinhar a linha com os quadros */}
-          
-          <div className="flex-1 w-full relative z-10"> {/* Container para os quadros mensais */}
-            {Object.entries(groupedEvents).map(([monthKey, eventsInMonth]) => (
-              <MonthTimelineBox key={monthKey} title={monthKey} events={eventsInMonth} />
-            ))}
-          </div>
+        {/* Container para os quadros mensais */}
+        <div className="w-full relative"> 
+          {Object.entries(groupedEvents).map(([monthKey, eventsInMonth]) => (
+            <MonthTimelineBox key={monthKey} title={monthKey} events={eventsInMonth} />
+          ))}
         </div>
       </div>
     </div>
