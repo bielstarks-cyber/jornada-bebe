@@ -41,7 +41,7 @@ const eventosBebe = [
 ];
 
 export default function BabyTimeline() {
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(true);
 
   const toggleGallery = () => {
     setIsGalleryOpen(!isGalleryOpen);
