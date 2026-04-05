@@ -24,15 +24,15 @@ const eventosBebe = [
   },
   {
     id: 4,
-    idade: "o Primeiro soninho com papai",
-    titulo: "Primeiros Passos 👣",
+    idade: "0 Meses",
+    titulo: "Primeiro soninho com o papai 💤",
     descricao: "O mundo ficou pequeno! Correndo pela casa toda.",
     imagem: "/fotos/soninho.jpeg"
   },
   {
     id: 5,
-    idade: "o Primeiro soninho com a mamãe",
-    titulo: "Primeiros Passos 👣",
+    idade: "0 Meses",
+    titulo: "o Primeiro soninho com a mamãe 💤",
     descricao: "O mundo ficou pequeno! Correndo pela casa toda.",
     imagem: "/fotos/soninho_mamae.jpeg"
   }
