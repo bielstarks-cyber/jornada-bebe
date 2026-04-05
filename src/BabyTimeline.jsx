@@ -9,6 +9,13 @@ const eventosBebe = [
     imagem: "/fotos/nascimento.jpeg" // Esse será o nome do arquivo da foto
   },
   {
+    id: 5,
+    idade: "0 Meses",
+    titulo: "Mamãe e Papai babões 👪",
+    descricao: "O mundo ficou pequeno! Correndo pela casa toda.",
+    imagem: "/fotos/mamae_papai.jpeg"
+  },
+  {
     id: 2,
     idade: "0 Meses",
     titulo: "Primeiro Bainho com o papai 🛀",
@@ -35,7 +42,25 @@ const eventosBebe = [
     titulo: "o Primeiro soninho com a mamãe 💤",
     descricao: "O mundo ficou pequeno! Correndo pela casa toda.",
     imagem: "/fotos/soninho_mamae.jpeg"
+  },
+
+    {
+    id: 5,
+    idade: "0 Meses",
+    titulo: "Visita titia Talita 💤",
+    descricao: "Leve esboço de como seria seu sorrisinho.",
+    imagem: "/fotos/tia_talita.jpeg"
+  },
+
+    {
+    id: 5,
+    idade: "0 Meses",
+    titulo: "Primeiro passeio no carro do papai 🚗",
+    descricao: "Vrum Vrum.",
+    imagem: "/fotos/carro.jpeg"
   }
+
+
 
 
 ];
