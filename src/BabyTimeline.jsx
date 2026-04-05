@@ -6,29 +6,38 @@ const eventosBebe = [
     idade: "0 Meses",
     titulo: "O Grande Dia! 👶",
     descricao: "O dia em que nossas vidas mudaram para sempre. Bem-vindo ao mundo!",
-    imagem: "/fotos/banho.jpg" // Esse será o nome do arquivo da foto
+    imagem: "/fotos/nascimento.jpeg" // Esse será o nome do arquivo da foto
   },
   {
     id: 2,
-    idade: "3 Meses",
-    titulo: "Primeiros Sorrisos 😊",
+    idade: "0 Meses",
+    titulo: "Primeiro Bainho com o papai 🛀",
     descricao: "Descobrindo como dar as melhores gargalhadas e derreter corações.",
-    imagem: "/fotos/mes-3.jpg"
+    imagem: "/fotos/banho.jpg"
   },
   {
     id: 3,
-    idade: "6 Meses",
-    titulo: "A Primeira Papinha 🥕",
+    idade: "0 Meses",
+    titulo: "A Primeira roupinha 🎀",
     descricao: "Uma bagunça deliciosa! Provando cenoura e maçã pela primeira vez.",
-    imagem: "/fotos/mes-6.jpg"
+    imagem: "/fotos/roupinha.jpeg"
   },
   {
     id: 4,
-    idade: "1 Aninho",
+    idade: "o Primeiro soninho com papai",
     titulo: "Primeiros Passos 👣",
     descricao: "O mundo ficou pequeno! Correndo pela casa toda.",
-    imagem: "/fotos/mes-12.jpg"
+    imagem: "/fotos/soninho.jpeg"
+  },
+  {
+    id: 5,
+    idade: "o Primeiro soninho com a mamãe",
+    titulo: "Primeiros Passos 👣",
+    descricao: "O mundo ficou pequeno! Correndo pela casa toda.",
+    imagem: "/fotos/soninho_mamae.jpeg"
   }
+
+
 ];
 
 export default function BabyTimeline() {
