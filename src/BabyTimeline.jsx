@@ -63,7 +63,7 @@ export default function BabyTimeline() {
     return (
       <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-8 relative">
         <div className="flex justify-between items-center cursor-pointer" onClick={toggleOpen}>
-          <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+          <h2 className="text-2xl font-bold text-gray-800 text-center flex-grow">{title}</h2>
           <svg 
             className={`w-6 h-6 text-gray-600 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`} 
             fill="none" 
@@ -81,13 +81,13 @@ export default function BabyTimeline() {
                 <span className="absolute flex items-center justify-center w-4 h-4 bg-blue-400 rounded-full -left-[9px] top-2 ring-4 ring-blue-50"></span>
                 
                 <div className="bg-gray-50 p-4 rounded-xl shadow-xs border border-gray-100"> 
-                  <span className="text-xs font-bold text-blue-500 uppercase tracking-wider">
+                  <span className="text-xs font-bold text-blue-500 uppercase tracking-wider text-left">
                     {evento.idade}
                   </span>
-                  <h4 className="text-lg font-bold text-gray-800 mt-1 mb-2"> 
+                  <h4 className="text-lg font-bold text-gray-800 mt-1 mb-2 text-left"> 
                     {evento.titulo}
                   </h4>
-                  <p className="text-gray-600 text-sm mb-4"> 
+                  <p className="text-gray-600 text-sm mb-4 text-left"> 
                     {evento.descricao}
                   </p>
 
@@ -115,7 +115,7 @@ export default function BabyTimeline() {
         {/* Coluna da Esquerda (Cabeçalho e Galeria Geral) */}
         <div className="md:w-1/2">
           {/* Cabeçalho */}
-          <div className="text-center md:text-left mb-16">
+          <div className="text-center mb-16">
             <h1 className="text-4xl font-extrabold text-gray-800 sm:text-5xl">
               Nossa Maior Aventura
             </h1>
