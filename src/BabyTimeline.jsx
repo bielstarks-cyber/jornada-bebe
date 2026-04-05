@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const eventosBebe = [
   {
@@ -41,6 +41,12 @@ const eventosBebe = [
 ];
 
 export default function BabyTimeline() {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+
+  const toggleGallery = () => {
+    setIsGalleryOpen(!isGalleryOpen);
+  };
+
   return (
     <div className="min-h-screen bg-blue-50 py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-3xl mx-auto">
@@ -53,6 +59,37 @@ export default function BabyTimeline() {
           <p className="mt-4 text-xl text-gray-600">
             A linha do tempo do nosso amorzinho.
           </p>
+        </div>
+
+        {/* Quadro Grande de Fotos (Galeria) */}
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mb-12">
+          <div className="flex justify-between items-center cursor-pointer" onClick={toggleGallery}>
+            <h2 className="text-2xl font-bold text-gray-800">Todas as Fotos</h2>
+            <svg 
+              className={`w-6 h-6 text-gray-600 transform transition-transform duration-300 ${isGalleryOpen ? 'rotate-180' : 'rotate-0'}`} 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          {isGalleryOpen && (
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {eventosBebe.map((evento) => (
+                <div key={`gallery-${evento.id}`} className="relative w-full overflow-hidden rounded-lg shadow-sm border border-gray-200">
+                  <img 
+                    src={evento.imagem} 
+                    alt={`Foto de ${evento.titulo}`}
+                    className="w-full h-auto object-contain bg-gray-50"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/50 to-transparent p-2 text-white text-xs font-semibold">
+                    {evento.titulo}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Timeline */}
